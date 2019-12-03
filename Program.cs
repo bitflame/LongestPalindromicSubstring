@@ -60,7 +60,7 @@ namespace LongestPalindromicSubstring
                 }
             }
             var palCent = Array.IndexOf(p, p.Max());
-            return RemoveStringFillers(t.Substring(palCent-p.Max(),palCent+p.Max()-1));
+            return RemoveStringFillers(t.Substring(palCent-p.Max(),p.Max()*2+1));
             //return RemoveStringFillers(lgstPal);
         }
         public static string RemoveStringFillers(string s)
