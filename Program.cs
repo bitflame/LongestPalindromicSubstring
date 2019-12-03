@@ -29,7 +29,7 @@ namespace LongestPalindromicSubstring
             Console.ReadLine();
         }
         //This is the alg from the video
-        private static string FindPalManacherVid(string t)
+        public static string FindPalManacherVid(string t)
         {
             int[] p = new int[t.Length];
             int c = 0, r = 0;
