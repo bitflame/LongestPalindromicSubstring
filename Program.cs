@@ -19,13 +19,16 @@ namespace LongestPalindromicSubstring
             Console.WriteLine(PrepareString("abababa"));
             Console.WriteLine(PrepareString("abcbabcbabcba"));
             //Need to pass ""(should give "" or length of 0), "ac" (should give a or lenth of 1) 
-            Console.WriteLine($"Result of Manacher's algorithm for {"babad"}:{FindPalManacherVid(Program.PrepareString("babad"))}");
-            Console.WriteLine($"Result of Manacher's algorithm for {"cbbd"}:{FindPalManacherVid(Program.PrepareString("cbbd"))}");
-            Console.WriteLine($"Result of Manacher's algorithm for {"bb"}:{FindPalManacherVid(Program.PrepareString("bb"))}");
-            Console.WriteLine($"Result of Manacher's algorithm for {"forgeeksskeegfor"}:{FindPalManacherVid(Program.PrepareString("forgeeksskeegfor"))}");
-            Console.WriteLine($"Result of Manacher's algorithm for {"abaaba"}:{FindPalManacherVid(Program.PrepareString("abaaba"))}");
-            Console.WriteLine($"Result of Manacher's algorithm for {"abababa"}:{FindPalManacherVid(Program.PrepareString("abababa"))}");
-            Console.WriteLine($"Result of Manacher's algorithm for {"abcbabcbabcba"}:{FindPalManacherVid(Program.PrepareString("abcbabcbabcba"))}");
+            Console.WriteLine($"Result of Manacher's algorithm for {"babad"} is:{FindPalManacherVid(Program.PrepareString("babad"))} !");
+            Console.WriteLine($"Result of Manacher's algorithm for {"cbbd"} is:{FindPalManacherVid(Program.PrepareString("cbbd"))} !");
+            Console.WriteLine($"Result of Manacher's algorithm for {"bb"} is:{FindPalManacherVid(Program.PrepareString("bb"))} !");
+            Console.WriteLine($"Result of Manacher's algorithm for {"forgeeksskeegfor"} is:{FindPalManacherVid(Program.PrepareString("forgeeksskeegfor"))} !");
+            Console.WriteLine($"Result of Manacher's algorithm for {"abaaba"} is:{FindPalManacherVid(Program.PrepareString("abaaba"))} !");
+            Console.WriteLine($"Result of Manacher's algorithm for {"abababa"} is:{FindPalManacherVid(Program.PrepareString("abababa"))} !");
+            Console.WriteLine($"Result of Manacher's algorithm for {"abcbabcbabcba"} is:{FindPalManacherVid(Program.PrepareString("abcbabcbabcba"))} !");
+            Console.WriteLine($"Result of Manacher's algorithm for {"a"} is:{FindPalManacherVid(Program.PrepareString("a"))} !");
+            Console.WriteLine($"Result of Manacher's algorithm for {"ac"} is:{FindPalManacherVid(Program.PrepareString("a"))} !");
+            Console.WriteLine($"Result of Manacher's algorithm for {"abb"} is:{FindPalManacherVid(Program.PrepareString("abb"))} !");
             Console.ReadLine();
         }
         //This is the alg from the video
@@ -59,7 +62,7 @@ namespace LongestPalindromicSubstring
                     r = i + p[i];
                 }
             }
-            var palCent = Array.IndexOf(p, p.Max());
+            var palCent = Math.Max(Array.IndexOf(p, p.Max()), 1);
             return RemoveStringFillers(t.Substring(palCent-p.Max(),p.Max()*2+1));
             //return RemoveStringFillers(lgstPal);
         }
@@ -74,6 +77,7 @@ namespace LongestPalindromicSubstring
         }
         public static string PrepareString(string s)
         {
+            
             string result = s;
             for (int i = 0; i < s.Length-1; i++)
             {
