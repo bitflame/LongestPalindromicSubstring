@@ -1,0 +1,6 @@
+C:\Users\usr\source\repos\LongestPalindromicSubstring\LongestPalindromicSubstring\bin\Debug\LongestPalindromicSubstring.exe.config
+C:\Users\usr\source\repos\LongestPalindromicSubstring\LongestPalindromicSubstring\bin\Debug\LongestPalindromicSubstring.exe
+C:\Users\usr\source\repos\LongestPalindromicSubstring\LongestPalindromicSubstring\bin\Debug\LongestPalindromicSubstring.pdb
+C:\Users\usr\source\repos\LongestPalindromicSubstring\LongestPalindromicSubstring\obj\Debug\LongestPalindromicSubstring.csprojAssemblyReference.cache
+C:\Users\usr\source\repos\LongestPalindromicSubstring\LongestPalindromicSubstring\obj\Debug\LongestPalindromicSubstring.exe
+C:\Users\usr\source\repos\LongestPalindromicSubstring\LongestPalindromicSubstring\obj\Debug\LongestPalindromicSubstring.pdb
